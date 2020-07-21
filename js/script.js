@@ -20,7 +20,7 @@ do {
     var level = parseInt(prompt('Scegli il livello di difficoltà: 0, 1 o 2'));
 } while (level != 0 && level != 1 && level != 2);
  
-var max;
+var max = 100;
 
 switch (level) {
     case 0:
@@ -68,7 +68,7 @@ var perso = false;
 var i = 0;
 while (i < (max - numeriPc.length) && perso == false ){
     var inputUtente = parseInt(prompt('Inserisci un numero da 1 a ' + max));
-    if (inputUtente >= 1 && inputUtente <= 100 && !numeriUtente.includes(inputUtente)) {
+    if (inputUtente >= 1 && inputUtente <= max && !numeriUtente.includes(inputUtente)) {
         if (numeriPc.includes(inputUtente)){
             perso = true;
             alert('Boom! Hai perso :\'(')
